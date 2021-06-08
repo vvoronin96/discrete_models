@@ -23,11 +23,11 @@ def statistisc(S):
 
     # 2) Probability that a customer has to wait
     probToWait = len([x for x in S.stats if x.waitingTimeInQueue > 0]) / len(S.stats)
-    print("Probability that a customer has to wait\t{0:.2f}".format(0.8-probToWait))
+    print("Probability that a customer has to wait\t{0:.2f}".format(probToWait))
 
     # 3) Probability of an Idle server
     probIdle = sum([x.idleTimeOfServer for x in S.stats]) / S.GlobalTime
-    print("Probability of an Idle server\t{0:.2f}".format(probIdle*10))
+    print("Probability of an Idle server\t{0:.2f}".format(probIdle))
 
     # 4) Average service time (theoretical 3.2)
     avServiceTime = sum([x.serviceTime for x in S.stats]) / len(S.stats)
