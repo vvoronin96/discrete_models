@@ -88,7 +88,7 @@ for i in range(len(category)):
     temp = []
     for j in range(len(years[:12]) - 1):
         temp.append(both_1950.loc[years[j], category[i]] / both_1950.loc[years[j + 1], category[i]])
-    sr_dict.append([np.min(temp), np.max(temp) - 0.5])
+    sr_dict.append([np.min(temp), np.max(temp)])
 
 sr_dict.append([np.min(fartility_list), np.max(fartility_list)])
 sr_dict.append([np.min(girl_prob_list), np.max(girl_prob_list)])
