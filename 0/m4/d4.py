@@ -26,7 +26,7 @@ class DEVS:
 
     def ProcessNextEvent(self):
         self.EQ.ProcessNextEvent()
-        self.work_cashiers.append(len([c for c in self.CASHs if c[1]]))
+        self.work_cashiers.append(len([c for c in self.CASHs if c[0][1]]))
         self.GlobalTime = self.EQ.globalTime
 
     def isCashierFree(self, id): return self.CASHs[id][0][0]
